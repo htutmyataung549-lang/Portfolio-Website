@@ -28,7 +28,7 @@ export default function ContactForm() {
 
   const onSubmit = async (data: ContactInput) => {
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000)); // Fake API Delay
+      // await new Promise((resolve) => setTimeout(resolve, 2000)); // Fake API Delay
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
@@ -43,8 +43,8 @@ export default function ContactForm() {
         }),
       });
       const results = await response.json();
-      console.log("Submit clicked")
-      console.log("Form Data", data);
+      // console.log("Submit clicked")
+      // console.log("Form Data", data);
       if (results.success) {
         toast.success("Message sent successfully! I'll get back to you soon.");
         reset();
@@ -156,6 +156,7 @@ export default function ContactForm() {
             {/* Submit Button */}
             <button
               type="submit"
+              aria-label="Send Message"
               disabled={isSubmitting}
               className="w-full bg-foreground text-background hover:bg-foreground/90 disabled:bg-foreground/40 font-medium text-sm py-3 px-6 rounded-xl transition shadow-sm flex items-center justify-center gap-2 cursor-pointer disabled:cursor-not-allowed"
             >
