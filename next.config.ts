@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone',
   async headers() {
     return [
       {
-        // အောက်ပါ header များအားလုံးကို website စာမျက်နှာတိုင်းအတွက် အသုံးပြုပါမည်
         source: '/(.*)',
         headers: [
           {
