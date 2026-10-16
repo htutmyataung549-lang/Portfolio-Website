@@ -120,7 +120,7 @@ export default function About() {
               </div>
               <div>
                 <h4 className="text-base font-bold text-foreground mb-1">
-                  Cloud Integration & Continuous Learning
+                  DevOps & Continuous Learning
                 </h4>
                 <p className="text-foreground/70 text-xs leading-relaxed">
                   Actively expanding my capabilities into cloud infrastructures

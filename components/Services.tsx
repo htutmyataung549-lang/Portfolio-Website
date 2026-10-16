@@ -16,12 +16,12 @@ const SERVICES_DATA = [
       "Crafting highly responsive, accessible user interfaces using Tailwind CSS and component libraries like Shadcn UI. Focused on creating intuitive layouts that provide seamless user experiences across all screen widths.",
     icon: Palette,
   },
-  {
-    title: "Cloud & DevOps Solutions",
-    description:
-      "Integrating modern cloud infrastructures and continuous automation pipelines. From containerization to handling workflow deployment on AWS, ensuring applications are production-ready and highly available.",
-    icon: CloudLightning,
-  },
+  // {
+  //   title: "Cloud & DevOps Solutions",
+  //   description:
+  //     "Integrating modern cloud infrastructures and continuous automation pipelines. From containerization to handling workflow deployment on AWS, ensuring applications are production-ready and highly available.",
+  //   icon: CloudLightning,
+  // },
 ];
 
 export default function Services() {
@@ -48,8 +48,12 @@ export default function Services() {
           </p>
         </motion.div>
 
-        {/* 3-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div 
+          className={`grid grid-cols-1 md:grid-cols-${Math.min(
+            SERVICES_DATA.length,
+            3
+          )} gap-8`}
+        >
           {SERVICES_DATA.map((service, index) => {
             const IconComponent = service.icon;
 

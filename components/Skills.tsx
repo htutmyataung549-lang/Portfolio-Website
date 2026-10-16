@@ -14,6 +14,8 @@ import {
   Boxes,
   Container,
   Activity,
+  Smartphone,
+  ServerCog,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -25,7 +27,9 @@ const SKILLS_DATA = [
       { name: "React.js", level: "Intermediate", icon: Cpu },
       { name: "TypeScript", level: "Intermediate", icon: Code2 },
       { name: "Tailwind CSS", level: "Intermediate", icon: Layers },
-      { name: "Shadcn UI / Radix", level: "Intermediate", icon: Boxes },
+      { name: "Shadcn UI", level: "Intermediate", icon: Boxes },
+      { name: "PrimeReact", level: "Beginner", icon: Boxes },
+      { name: "Flutter", level: "Beginner", icon: Smartphone },
       { name: "Vanilla JavaScript", level: "Intermediate", icon: Terminal },
     ],
   },
@@ -41,11 +45,10 @@ const SKILLS_DATA = [
     ],
   },
   {
-    category: "Cloud & DevOps (100 Days of KodeKloud DevOps)",
+    category: "DevOps (100 Days of KodeKloud DevOps)",
     skills: [
-      { name: "AWS Services", level: "Beginner", icon: CloudLightning },
       { name: "Docker Containers", level: "Beginner", icon: Container },
-      { name: "CI/CD Pipelines", level: "Beginner", icon: Workflow },
+      { name: "Kubernetes", level: "Beginner", icon: ServerCog }, 
       { name: "Vercel / Neon Cloud", level: "Beginner", icon: Globe },
     ],
   },

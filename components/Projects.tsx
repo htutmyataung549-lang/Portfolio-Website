@@ -4,66 +4,90 @@ import { ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 
 const PROJECT_DATA = [
-  {
-    title: "Manage Tasks App",
-    description: "A comprehensive Task Management System with full CRUD capabilities, an analytics chart dashboard, dark mode toggle, and robust schema handling.",
-    tags: ["Next.js 15", "Payload CMS", "Postgres", "Neon", "Shadcn UI"],
-    link: "https://manage-tasks-uda4.vercel.app"
-  },
+  // {
+  //   title: "Manage Tasks App",
+  //   description: "A comprehensive Task Management System with full CRUD capabilities, an analytics chart dashboard, dark mode toggle, and robust schema handling.",
+  //   tags: ["Next.js 15", "Payload CMS", "Postgres", "Neon", "Shadcn UI"],
+  //   link: "https://manage-tasks-uda4.vercel.app"
+  // },
   {
     title: "Bookings Management System",
-    description: "A decoupled, full-stack scheduling and booking application featuring an enterprise Java backend microservice integrated with a high-performance Next.js client.",
+    description:
+      "A decoupled, full-stack scheduling and booking application featuring an enterprise Java backend microservice integrated with a high-performance Next.js client.",
     tags: ["Next.js", "Java", "REST API", "Tailwind CSS"],
-    link: "https://bookings-management-system-frontend.vercel.app/"
+    link: "https://bookings-management-system-frontend.vercel.app/",
   },
   {
     title: "Recipe Finder App",
-    description: "An asynchronous web application that queries a third-party food database API to fetch, filter, and render culinary recipes based on user keyword search criteria.",
+    description:
+      "An asynchronous web application that queries a third-party food database API to fetch, filter, and render culinary recipes based on user keyword search criteria.",
     tags: ["HTML5", "CSS3", "JavaScript (ES6+)", "Fetch API", "Netlify"],
-    link: "https://creative-dodol-b6bd87.netlify.app/"
+    link: "https://creative-dodol-b6bd87.netlify.app/",
   },
-  {
-    title: "Dynamic Web Calculator",
-    description: "A fully responsive math calculator featuring standard arithmetic operations, clean UI layouts, and instant input evaluation logic engineered with native web standards.",
-    tags: ["HTML5", "CSS3", "Vanilla JavaScript", "Netlify"],
-    link: "https://dainty-squirrel-c4afb2.netlify.app/"
-  },
+  // {
+  //   title: "Dynamic Web Calculator",
+  //   description: "A fully responsive math calculator featuring standard arithmetic operations, clean UI layouts, and instant input evaluation logic engineered with native web standards.",
+  //   tags: ["HTML5", "CSS3", "Vanilla JavaScript", "Netlify"],
+  //   link: "https://dainty-squirrel-c4afb2.netlify.app/"
+  // },
   {
     title: "Interactive Quiz Application",
-    description: "A dynamic quiz application featuring real-time score tracking, immediate response feedback, and interactive client-side state management built using native web APIs.",
+    description:
+      "A dynamic quiz application featuring real-time score tracking, immediate response feedback, and interactive client-side state management built using native web APIs.",
     tags: ["HTML5", "CSS3", "Vanilla JavaScript", "Netlify"],
-    link: "https://clinquant-gumption-56ed31.netlify.app/"
+    link: "https://clinquant-gumption-56ed31.netlify.app/",
   },
   {
     title: "Cinematic Movie Hub",
-    description: "A dynamic, interactive movie discovery website featuring clean layouts, responsive media grids, and client-side filtering built with native web standards.",
+    description:
+      "A dynamic, interactive movie discovery website featuring clean layouts, responsive media grids, and client-side filtering built with native web standards.",
     tags: ["HTML5", "CSS3", "Vanilla JavaScript", "Netlify"],
-    link: "https://deluxe-liger-9bc2a0.netlify.app/"
-  }
+    link: "https://deluxe-liger-9bc2a0.netlify.app/",
+  },
+  {
+    title: "Service Pro Steel",
+    description:
+      "A professional and modern web application built with React and Vite, designed for steel service business solutions featuring responsive UI, service listings, and seamless user interaction.",
+    tags: ["React", "Vite", "Tailwind CSS", "JavaScript"],
+    link: "https://service-pro-steel.vercel.app/",
+  },
+  {
+    title: "E-Commerce Web Application",
+    description:
+      "A modern and fully functional e-commerce web application featuring product listings, a shopping cart, and a smooth user interface for online shopping.",
+    tags: ["React", "Prime-React", "Tailwind CSS", "JavaScript"],
+    link: "https://ecommence-navy.vercel.app/",
+  },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="w-full py-20 bg-background border-y border-foreground/10 transition-colors duration-300">
+    <section
+      id="projects"
+      className="w-full py-20 bg-background border-y border-foreground/10 transition-colors duration-300"
+    >
       <div className="max-w-6xl w-full mx-auto px-6">
-        
         {/* Header Title (Fade In Animation) */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="max-w-2xl mb-12"
         >
-          <h2 className="text-3xl font-bold text-foreground mb-2">Selected Work</h2>
-          <p className="text-foreground/70">A handpicked selection of things I&apos;ve built recently.</p>
+          <h2 className="text-3xl font-bold text-foreground mb-2">
+            Selected Work
+          </h2>
+          <p className="text-foreground/70">
+            A handpicked selection of things I&apos;ve built recently.
+          </p>
         </motion.div>
-        
+
         {/* Project Grid Container */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {PROJECT_DATA.map((project, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -75,12 +99,17 @@ export default function Projects() {
                 <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-foreground/70 text-sm mb-4 leading-relaxed">{project.description}</p>
-                
+                <p className="text-foreground/70 text-sm mb-4 leading-relaxed">
+                  {project.description}
+                </p>
+
                 {/* Tech Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, tIdx) => (
-                    <span key={tIdx} className="text-xs font-semibold bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 px-2.5 py-1 rounded-full transition-colors">
+                    <span
+                      key={tIdx}
+                      className="text-xs font-semibold bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 px-2.5 py-1 rounded-full transition-colors"
+                    >
                       {tag}
                     </span>
                   ))}
@@ -88,9 +117,9 @@ export default function Projects() {
               </div>
 
               {/* View Project Link with Lucide Icon */}
-              <a 
-                href={project.link} 
-                target="_blank" 
+              <a
+                href={project.link}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-semibold text-foreground/80 group-hover:text-blue-600 dark:group-hover:text-blue-400 inline-flex items-center gap-1.5 transition-colors self-start border border-foreground/10 group-hover:border-blue-200 dark:group-hover:border-blue-900 px-3 py-1.5 rounded-lg bg-foreground/[0.02] group-hover:bg-blue-50/30 dark:group-hover:bg-blue-950/20"
               >
