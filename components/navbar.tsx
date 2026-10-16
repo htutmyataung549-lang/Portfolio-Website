@@ -66,13 +66,12 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full bg-background/95 backdrop-blur-md z-50 border-b border-foreground/10 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        {/* 💡 text-gray-900 အစား text-foreground သို့ ပြောင်းပါသည် */}
         <Link
           href="/"
           className="font-bold text-xl tracking-tight text-foreground flex items-center gap-2"
         >
           <span className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
-          <span>Dev.Porto</span>
+          <span>Htut Myat.Porto</span>
         </Link>
 
         {/* Desktop Navigation */}

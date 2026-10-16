@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Certificates from "@/components/Certificates";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
+import GitHubStats from "@/components/GitHubStats";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/navbar";
 import Projects from "@/components/Projects";
@@ -22,6 +23,7 @@ export default function Home() {
         <Projects />
         <Certificates />
         <TechBlog/>
+        <GitHubStats />
         <Contact />
       </main>
       <footer className="w-full bg-background border-t border-foreground/10 py-6 text-center transition-colors duration-300">

@@ -2,7 +2,14 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Calendar, Clock, X, BookOpen, CheckCircle2 } from "lucide-react";
+import {
+  ArrowRight,
+  Calendar,
+  Clock,
+  X,
+  BookOpen,
+  CheckCircle2,
+} from "lucide-react";
 
 interface Note {
   title: string;
@@ -65,7 +72,7 @@ export default function TechBlog() {
   return (
     <section
       id="blog"
-      className="w-full py-12 sm:py-24  bg-background border-y border-foreground/10 transition-colors duration-300 relative overflow-hidden"
+      className="w-full py-12 sm:py-24  bg-background transition-colors duration-300 relative overflow-hidden"
     >
       <div className="max-w-6xl w-full mx-auto px-6">
         {/* Header Title */}
@@ -80,7 +87,8 @@ export default function TechBlog() {
             Tech Blog & Notes
           </h2>
           <p className="text-foreground/70 text-sm sm:text-base">
-            Sharing my learning notes, DevOps milestones, and software engineering insights.
+            Sharing my learning notes, DevOps milestones, and software
+            engineering insights.
           </p>
         </motion.div>
 
@@ -95,7 +103,7 @@ export default function TechBlog() {
               transition={{ duration: 0.5, delay: index * 0.15 }}
               whileHover={{ y: -6 }}
               onClick={() => setSelectedNote(post)}
-              className="p-6 rounded-2xl border border-foreground/10 bg-foreground/[0.02] hover:bg-background hover:shadow-xl dark:hover:shadow-blue-950/30 hover:border-blue-500/30 transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+              className="p-6 rounded-2xl border border-foreground/10 bg-foreground/2 hover:bg-background hover:shadow-xl dark:hover:shadow-blue-950/30 hover:border-blue-500/30 transition-all duration-300 flex flex-col justify-between group cursor-pointer"
             >
               <div>
                 {/* Top Meta */}
@@ -139,9 +147,9 @@ export default function TechBlog() {
                   <span>{post.readTime}</span>
                 </div>
 
-    <span className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 dark:text-blue-400 group-hover:translate-x-1 transition-transform">
-  Read Note <ArrowRight className="w-4 h-4" />
-</span>
+                <span className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 dark:text-blue-400 group-hover:translate-x-1 transition-transform">
+                  Read Note <ArrowRight className="w-4 h-4" />
+                </span>
               </div>
             </motion.div>
           ))}
@@ -170,7 +178,9 @@ export default function TechBlog() {
                 <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-900">
                   {selectedNote.category}
                 </span>
-                <span className="text-xs text-foreground/60">• {selectedNote.readTime}</span>
+                <span className="text-xs text-foreground/60">
+                  • {selectedNote.readTime}
+                </span>
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
@@ -183,12 +193,16 @@ export default function TechBlog() {
 
               {/* Key Takeaways / Content */}
               <h4 className="text-sm font-semibold text-foreground mb-3 flex items-center gap-2">
-                <BookOpen className="w-4 h-4 text-blue-600 dark:text-blue-400" /> Key Topics & Takeaways:
+                <BookOpen className="w-4 h-4 text-blue-600 dark:text-blue-400" />{" "}
+                Key Topics & Takeaways:
               </h4>
-              
+
               <ul className="space-y-2.5 mb-6">
                 {selectedNote.content.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-foreground/70">
+                  <li
+                    key={idx}
+                    className="flex items-start gap-2.5 text-xs sm:text-sm text-foreground/70"
+                  >
                     <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
