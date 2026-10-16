@@ -40,7 +40,7 @@ export default function Experience() {
       id="experience"
       className="w-full py-16 sm:py-24 bg-background transition-colors duration-300 relative overflow-hidden"
     >
-      <div className="max-w-4xl w-full mx-auto px-6">
+      <div className="max-w-6xl w-full mx-auto px-6">
         {/* Header Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -70,19 +70,18 @@ export default function Experience() {
               className="relative pl-6 sm:pl-8 group"
             >
               {/* Timeline Dot Icon */}
-              <div className="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-background border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+              <div className="absolute -left-4.25 top-1.5 w-8 h-8 rounded-full bg-background border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 flex items-center justify-center shadow-md group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
                 <Briefcase className="w-4 h-4" />
               </div>
 
-              {/* Period Badge (Desktop & Mobile Responsive) */}
               {/* Period Badge (Desktop & Mobile Responsive with fixed spacing for lg screens) */}
-              <div className="md:absolute md:-left-40 lg:-left-48 md:top-2 text-xs font-semibold text-foreground/60 mb-3 md:mb-0 flex items-center gap-1.5 bg-foreground/5 md:bg-transparent px-2.5 py-1 md:p-0 rounded-md w-fit whitespace-nowrap">
+              <div className="md:absolute md:-left-40 lg:-left-42 md:top-2 text-xs font-semibold text-foreground/60 mb-3 md:mb-0 flex items-center gap-1.5 bg-foreground/5 md:bg-transparent px-2.5 py-1 md:p-0 rounded-md w-fit whitespace-nowrap">
                 <Calendar className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
                 <span>{item.period}</span>
               </div>
 
               {/* Content Card */}
-              <div className="p-6 rounded-2xl border border-foreground/10 bg-foreground/[0.02] hover:bg-background hover:shadow-xl hover:-translate-y-1 dark:hover:shadow-blue-950/30 hover:border-blue-500/30 transition-all duration-300">
+              <div className="p-6 rounded-2xl border border-foreground/10 bg-foreground/2 hover:bg-background hover:shadow-xl hover:-translate-y-1 dark:hover:shadow-blue-950/30 hover:border-blue-500/30 transition-all duration-300">
                 {/* Role Title */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
                   <h3 className="text-lg sm:text-xl font-bold text-foreground">

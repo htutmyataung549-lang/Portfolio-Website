@@ -64,7 +64,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="w-full py-20 bg-background border-y border-foreground/10 transition-colors duration-300"
+      className="w-full py-16"
     >
       <div className="max-w-6xl w-full mx-auto px-6">
         {/* Header Title (Fade In Animation) */}

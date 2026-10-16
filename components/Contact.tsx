@@ -60,7 +60,7 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className="py-20 bg-background transition-colors duration-300"
+      className="py-14 bg-background transition-colors duration-300"
     >
       <div className="max-w-4xl mx-auto px-6">
         {/* Header */}
