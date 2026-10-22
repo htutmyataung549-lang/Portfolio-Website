@@ -62,7 +62,6 @@ export default function Navbar() {
   const isDarkMode = resolvedTheme === "dark";
 
   return (
-    // 💡 bg-white အစား bg-background/95၊ border-gray-100 အစား border-foreground/10 (opacity 10%) ကို အသုံးပြုပါသည်
     <nav className="fixed top-0 left-0 w-full bg-background/95 backdrop-blur-md z-50 border-b border-foreground/10 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}

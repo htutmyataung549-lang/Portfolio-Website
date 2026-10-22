@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Nunito_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 import Providers from "./providers";
 import { Analytics } from "@vercel/analytics/next";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Nunito Sans font ကို ချိတ်ဆက်ခြင်း
+const nunitoSans = Nunito_Sans({
+  variable: "--font-nunito-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -53,9 +55,9 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${nunitoSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-white dark:bg-gray-950 text-gray-950 dark:text-gray-50 transition-colors duration-300">
+      <body className="min-h-full flex flex-col bg-white dark:bg-gray-950 text-gray-950 dark:text-gray-50 transition-colors duration-300 font-sans">
         <Providers>{children}</Providers>
         <Toaster richColors position="top-center" />
         <Analytics/>
