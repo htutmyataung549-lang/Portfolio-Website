@@ -18,6 +18,14 @@ import {
   ServerCog,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import {
+  CodeBlock,
+  CodeBlockHeader,
+  CodeBlockTitle,
+  CodeBlockActions,
+  CodeBlockCopyButton,
+  CodeBlockContent,
+} from "@/components/ui/code-block";
 
 const SKILLS_DATA = [
   {
@@ -48,13 +56,20 @@ const SKILLS_DATA = [
     category: "DevOps (100 Days of KodeKloud DevOps)",
     skills: [
       { name: "Docker Containers", level: "Beginner", icon: Container },
-      { name: "Kubernetes", level: "Beginner", icon: ServerCog }, 
-      { name: "Vercel / Neon Cloud", level: "Beginner", icon: Globe },
+      // { name: "Kubernetes", level: "Beginner", icon: ServerCog }, 
+      { name: "Vercel / Neon ", level: "Beginner", icon: Globe },
     ],
   },
 ];
 
 export default function Skills() {
+  const skillsJson = `{
+  "frontend": ["Next.js 15", "React", "TypeScript", "Tailwind"],
+  "backend": ["Spring Boot", "Node.js", "PostgreSQL", "Prisma"],
+  "devOps": ["Docker", "Vercel"],
+  "focus": "Building scalable full-stack web applications & cloud deployment"
+}`;
+
   return (
     <section
       id="skills"
@@ -67,7 +82,7 @@ export default function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-2xl mx-auto mb-16"
+          className="text-center max-w-2xl mx-auto mb-12"
         >
           <h2 className="text-3xl font-bold text-foreground tracking-tight mb-3">
             Technical Skills
@@ -76,6 +91,31 @@ export default function Skills() {
             Proficient in modern web technologies, secure backend systems, and
             automated cloud deployments.
           </p>
+        </motion.div>
+
+        {/* Code Block Showcase */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="max-w-3xl mx-auto mb-16"
+        >
+          <CodeBlock>
+            <CodeBlockHeader>
+              <CodeBlockTitle>
+                <Terminal className="size-4 text-emerald-400 inline-block mr-1.5" />
+                skills-manifest.json
+              </CodeBlockTitle>
+              <CodeBlockActions>
+                <CodeBlockCopyButton value={skillsJson} />
+              </CodeBlockActions>
+            </CodeBlockHeader>
+
+            <CodeBlockContent lineNumbers={true}>
+              {skillsJson}
+            </CodeBlockContent>
+          </CodeBlock>
         </motion.div>
 
         {/* Categories Grid */}

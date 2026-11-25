@@ -1,26 +1,9 @@
 "use client";
 
-import { Code2, ShieldCheck, CloudLightning, Terminal } from "lucide-react";
+import { User, Code2, ShieldCheck, CloudLightning } from "lucide-react";
 import { motion } from "framer-motion";
-import {
-  CodeBlock,
-  CodeBlockHeader,
-  CodeBlockTitle,
-  CodeBlockActions,
-  CodeBlockCopyButton,
-  CodeBlockContent,
-} from "@/components/ui/code-block";
 
 export default function About() {
-  const codeString = `const developer = {
-  name: "Htut Myat Aung",
-  role: "Full-Stack Developer",
-  company: "CHID Bank",
-  stack: ["React.js","Next.js", "Spring Boot", "PostgreSQL"],
-  learning: "KodeKloud DevOps",
-  hireable: true
-};`;
-
   return (
     <section
       id="about"
@@ -46,7 +29,7 @@ export default function About() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          {/* Left Column: Code Block Profile Style */}
+          {/* Left Column: Brief Introduction (Slide from left/bottom) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -54,29 +37,20 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-5 space-y-6"
           >
-            {/* Shadcn Code Block Component */}
-            <CodeBlock>
-              <CodeBlockHeader>
-                <CodeBlockTitle>
-                  <Terminal className="size-4 text-emerald-400 inline-block mr-1.5" />
-                  developer.ts
-                </CodeBlockTitle>
-                <CodeBlockActions>
-                  <CodeBlockCopyButton value={codeString} />
-                </CodeBlockActions>
-              </CodeBlockHeader>
-
-              <CodeBlockContent lineNumbers={true}>
-                {codeString}
-              </CodeBlockContent>
-            </CodeBlock>
-
-            {/* Brief Introduction Text */}
-            <div className="p-6 rounded-2xl bg-background border border-foreground/10 shadow-sm space-y-3 transition-colors duration-300">
-              <h3 className="text-lg font-bold text-foreground">Who I Am</h3>
-              <p className="text-foreground/70 text-xs sm:text-sm leading-relaxed">
+            <div className="p-8 rounded-2xl bg-background border border-foreground/10 shadow-sm space-y-4 transition-colors duration-300">
+              <div className="inline-flex p-3 rounded-xl bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 mb-2">
+                <User className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground">Who I Am</h3>
+              <p className="text-foreground/70 text-sm leading-relaxed">
                 I am a passionate Full-Stack Software Developer dedicated to
                 building clean, scalable, and user-centric web applications.
+              </p>
+              <p className="text-foreground/70 text-sm leading-relaxed">
+                With a strong foundation in modern frontend frameworks and
+                robust backend ecosystems, I bridge the gap between seamless
+                user experiences and secure, production-ready underlying
+                systems.
               </p>
             </div>
           </motion.div>
@@ -90,7 +64,7 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
               whileHover={{ scale: 1.01, y: -2 }}
-              className="p-6 rounded-xl bg-background border border-foreground/10 shadow-sm flex gap-4 items-start hover:shadow-md transition-all duration-300"
+              className="p-6 rounded-xl bg-background border border-foreground/10 shadow-sm flex gap-4 items-start hover:shadow-md hover:bg-foreground/2 dark: transition-all duration-300"
             >
               <div className="p-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 shrink-0">
                 <Code2 className="w-5 h-5" />
@@ -114,7 +88,7 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
               whileHover={{ scale: 1.01, y: -2 }}
-              className="p-6 rounded-xl bg-background border border-foreground/10 shadow-sm flex gap-4 items-start hover:shadow-md transition-all duration-300"
+              className="p-6 rounded-xl bg-background border border-foreground/10 shadow-sm flex gap-4 items-start hover:shadow-md hover:bg-foreground/2 transition-all duration-300"
             >
               <div className="p-2.5 rounded-lg bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 shrink-0">
                 <ShieldCheck className="w-5 h-5" />
@@ -139,7 +113,7 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
               whileHover={{ scale: 1.01, y: -2 }}
-              className="p-6 rounded-xl bg-background border border-foreground/10 shadow-sm flex gap-4 items-start hover:shadow-md transition-all duration-300"
+              className="p-6 rounded-xl bg-background border border-foreground/10 shadow-sm flex gap-4 items-start hover:shadow-md hover:bg-foreground/2 transition-all duration-300"
             >
               <div className="p-2.5 rounded-lg bg-purple-50 dark:bg-purple-950/40 text-purple-600 dark:text-purple-400 shrink-0">
                 <CloudLightning className="w-5 h-5" />

@@ -111,9 +111,9 @@ export default function Hero() {
             </a>
 
             <a
-              href="/docs/resume.pdf"
+              href="/docs/HTUT MYAT AUNG _FullStackDeveloper_CV.pdf"
               download="Htut Myat Aung_CV.pdf"
-              className="border border-foreground/15 bg-foreground/[0.02] hover:bg-foreground/5 text-foreground px-6 py-3 rounded-xl font-medium transition-all duration-200 inline-flex items-center gap-2.5 shadow-sm text-sm sm:text-base"
+              className="border border-foreground/15 bg-foreground/2 hover:bg-foreground/5 text-foreground px-6 py-3 rounded-xl font-medium transition-all duration-200 inline-flex items-center gap-2.5 shadow-sm text-sm sm:text-base"
             >
               <Download className="w-4 h-4 text-foreground/60" />
               <span>Download CV</span>
